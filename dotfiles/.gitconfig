@@ -1,12 +1,12 @@
 [user]
-	email = shoooooo.bqt@gmail.com
-	name = ShoheiKamiya
+  email = shoooooo.bqt@gmail.com
+  name = ShoheiKamiya
 
 [alias]
-	cm = commit
-	br = branch
-	co = checkout
-	df = diff --name-only
-	dfs = diff --staged
-	st = status
-        logs = log --oneline -n 10
+  cm = commit
+  br = branch
+  co = checkout
+  df = diff --name-only
+  dfs = diff --staged
+  st = status
+  logs = log --oneline -n 10

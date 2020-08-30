@@ -18,6 +18,6 @@ for app in $MAC_APPS; do
   if brew cask list | grep -q $app; then
     echo "Skip: brew cask install ${app}"
   else
-    brew install $app
+    brew cask install $app
   fi
 done

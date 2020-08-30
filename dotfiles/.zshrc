@@ -16,6 +16,9 @@ autoload -Uz compinit && compinit
 # ディレクトリの表示を青色にする
 export CLICOLOR=1
 
+# 上書きリダイレクトを禁止
+setopt no_clobber
+
 # プロンプトをカスタマイズ
 
 # gitの情報を取得

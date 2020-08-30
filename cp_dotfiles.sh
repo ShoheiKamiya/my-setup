@@ -1,1 +1,0 @@
-cp -pR ./dotfiles/ ~/

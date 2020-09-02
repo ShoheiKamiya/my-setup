@@ -65,6 +65,11 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+# [peco] ブランチを切り替えるときにインクリメンタルサーチ
+function co() {
+  git branch | peco | xargs git checkout
+}
+
 # ==============
 #  PATH
 # ==============

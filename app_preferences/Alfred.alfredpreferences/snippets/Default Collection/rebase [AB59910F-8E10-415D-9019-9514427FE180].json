@@ -1,6 +1,6 @@
 {
   "alfredsnippet" : {
-    "snippet" : "git pull --rebase upstream feature02",
+    "snippet" : "git pull --rebase origin feature02",
     "uid" : "AB59910F-8E10-415D-9019-9514427FE180",
     "name" : "rebase",
     "keyword" : "rebase"

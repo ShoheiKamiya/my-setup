@@ -9,4 +9,4 @@
   df = diff --name-only
   dfs = diff --staged
   st = status
-  logs = log --oneline -n 10
+  logs = log --oneline -n 5

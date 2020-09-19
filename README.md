@@ -8,6 +8,15 @@ git clone https://github.com/ShoheiKamiya/my-setup.git
 ```
 after that, Import preferences files at each App (Alfred, iterm2, and BetterTouchTool)
 
+**[Alfred]**
+Advanced > Syncing > Set preferences folder...
+
+**[iterm2]**
+General > Preferences > Load Preferences from a custom folder or URL
+
+**[BetterTouchTool]**
+プリセット > インポート
+
 ## Instllation Scripts
 
 brew packages:

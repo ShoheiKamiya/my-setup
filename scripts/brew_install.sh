@@ -12,7 +12,7 @@ if ! which -s brew; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-. ./var/brew_packages.sh
+. ~/my-setup/var/brew_packages.sh
 # Install brew packages
 for package in $BREW_PACKAGES; do
   if brew list -l | grep -q $package; then

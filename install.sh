@@ -1,4 +1,4 @@
-. ./scripts/ln_dotfiles.sh
-. ./scripts/brew_cask_install.sh
-. ./scripts/brew_install.sh
-. ./scripts/defaults.sh
+. ~/my-setup/scripts/ln_dotfiles.sh
+. ~/my-setup/scripts/brew_cask_install.sh
+. ~/my-setup/scripts/brew_install.sh
+. ~/my-setup/scripts/defaults.sh

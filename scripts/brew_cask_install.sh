@@ -13,7 +13,7 @@ if ! which -s cask; then
 fi
 
 # Install apps
-. ./var/mac_apps.sh
+. ~/my-setup/var/mac_apps.sh
 for app in $MAC_APPS; do
   if brew cask list | grep -q $app; then
     echo "Skip: brew cask install ${app}"

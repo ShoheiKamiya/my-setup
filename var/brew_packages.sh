@@ -56,6 +56,7 @@ little-cms2
 lua
 lzo
 nettle
+ngrok
 node
 oniguruma
 opencore-amr

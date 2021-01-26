@@ -10,6 +10,9 @@ alias la="ls -al -G"
 alias d="docker"
 alias dcom="docker-compose"
 
+# Alias daily log
+alias memo="nvim ~/logs/`date '+%Y%m%d'`.md"
+
 # Git タブ補完
 autoload -Uz compinit && compinit
 

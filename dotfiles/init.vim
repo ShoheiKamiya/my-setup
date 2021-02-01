@@ -2,7 +2,8 @@ set title "タイトルをセット
 set number "行番号を表示
 set hls    "検索した文字をハイライト
 set clipboard=unnamed "yankした文字列をクリップボードにコピー
-set tabstop=2 "タブが変換される空白文字の数
+set expandtab
+set tabstop=2
 set shiftwidth=2 "自動インデント時に入力する空白の数
 set autoindent "改行時に自動でインデント
 set cursorline "現在の行を強調表示

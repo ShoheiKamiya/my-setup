@@ -11,7 +11,7 @@ alias d="docker"
 alias dcom="docker-compose"
 
 # Alias daily log
-alias memo="nvim ~/logs/`date '+%Y%m%d'`.md"
+alias memo="nvim ~/logs/`date '+%d'`.md"
 
 # Git タブ補完
 autoload -Uz compinit && compinit
@@ -71,6 +71,15 @@ bindkey '^R' peco-history-selection
 # [peco] ブランチを切り替えるときにインクリメンタルサーチ
 function co() {
   git branch | peco | xargs git checkout
+}
+
+# [peco] incremental search when git add
+function add() {
+  git diff --name-only | peco | xargs git add
+}
+
+function p() {
+  find . | peco | xargs code
 }
 
 # ==============

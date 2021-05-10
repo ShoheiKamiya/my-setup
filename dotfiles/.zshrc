@@ -79,7 +79,7 @@ function add() {
 }
 
 function p() {
-  find . | peco | xargs code
+  find . | peco | xargs nvim
 }
 
 # ==============

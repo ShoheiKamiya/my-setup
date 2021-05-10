@@ -1,3 +1,4 @@
+colorscheme peachpuff
 set title "タイトルをセット
 set number "行番号を表示
 set hls    "検索した文字をハイライト
@@ -17,6 +18,8 @@ set smartcase " 検索文字列に大文字が含まれている場合は区別�
 set showmatch "括弧の対応をハイライト
 set colorcolumn=100 "ルーラーを表示
 set scrolloff=8                " 上下8行の視界を確保
+let g:netrw_banner=0 "hide netrw header information
+let g:netrw_liststyle=3 "default tree view
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 "ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>

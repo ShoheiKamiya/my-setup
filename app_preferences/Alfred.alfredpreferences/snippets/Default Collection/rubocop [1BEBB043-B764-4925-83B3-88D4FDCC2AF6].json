@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "bin\/dcdev run --rm app bundle exec rubocop -a ",
-    "uid" : "1BEBB043-B764-4925-83B3-88D4FDCC2AF6",
-    "name" : "rubocop",
-    "keyword" : "rubocop"
-  }
-}

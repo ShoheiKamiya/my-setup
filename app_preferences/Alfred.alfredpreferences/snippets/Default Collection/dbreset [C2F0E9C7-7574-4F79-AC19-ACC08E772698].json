@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "bin\/dcdev run --rm app bundle exec rails db:reset db:seed:only_once sequence_fixer:fix_all",
-    "uid" : "C2F0E9C7-7574-4F79-AC19-ACC08E772698",
-    "name" : "db:reset",
-    "keyword" : "db:reset"
-  }
-}

@@ -82,6 +82,10 @@ function p() {
   find . | peco | xargs nvim
 }
 
+function s() {
+  cat ~/logs/snippets.txt | peco
+}
+
 # ==============
 #  PATH
 # ==============

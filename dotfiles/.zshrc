@@ -86,6 +86,11 @@ function s() {
   cat ~/logs/snippets.txt | peco
 }
 
+function l() {
+  text="+%H:%M $1 [$2pt]"
+  date $text >> "$HOME/logs/`date "+%d"`.md"
+}
+
 # ==============
 #  PATH
 # ==============

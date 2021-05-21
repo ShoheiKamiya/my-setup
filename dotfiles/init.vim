@@ -23,4 +23,5 @@ let g:netrw_liststyle=3 "default tree view
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 "ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>

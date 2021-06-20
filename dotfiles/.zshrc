@@ -99,3 +99,7 @@ function l() {
 [[ -d ~/.rbenv  ]] && \
 export PATH=${HOME}/.rbenv/bin:${PATH} && \
 eval "$(rbenv init -)"
+
+# aws cli
+export AWS_DEFAULT_REGION=ap-northeast-1
+export AWS_PROFILE=gsuite

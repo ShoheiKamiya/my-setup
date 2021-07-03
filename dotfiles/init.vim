@@ -1,4 +1,6 @@
 colorscheme peachpuff
+autocmd ColorScheme * highlight ColorColumn ctermbg=Black
+autocmd ColorScheme * highlight Folded ctermbg=Black
 set title "タイトルをセット
 set number "行番号を表示
 set hls    "検索した文字をハイライト
@@ -18,9 +20,10 @@ set smartcase " 検索文字列に大文字が含まれている場合は区別�
 set showmatch "括弧の対応をハイライト
 set colorcolumn=100 "ルーラーを表示
 set scrolloff=8                " 上下8行の視界を確保
+set foldmethod=indent
+set foldlevel=0
 let g:netrw_banner=0 "hide netrw header information
 let g:netrw_liststyle=3 "default tree view
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 "ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent> <C-j> :bprev<CR>
@@ -37,7 +40,7 @@ let mapleader = "\<space>"
 nmap <Leader>f [fzf-p]
 xmap <Leader>f [fzf-p]
 "=====fzf-preview keymap=====
-nnoremap <silent> <Leader>p     :<C-u>CocCommand fzf-preview.ProjectFiles --resume -i<CR>
+nnoremap <silent> <Leader>p     :<C-u>CocCommand fzf-preview.ProjectFiles -i<CR>
 nnoremap <silent> <Leader>b     :<C-u>CocCommand fzf-preview.Buffers<CR>
 "require ripgrep https://github.com/BurntSushi/ripgrep
 nnoremap <silent> <Leader>s     :<C-u>CocCommand fzf-preview.ProjectGrep --resume -i<space>
@@ -81,7 +84,6 @@ endif
 
 "=====defx settings=====
 nnoremap <silent><Leader>f :<C-u>Defx<CR>
-autocmd VimEnter * execute 'Defx'
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort

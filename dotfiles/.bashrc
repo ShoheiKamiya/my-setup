@@ -23,3 +23,5 @@ alias dcom="docker-compose"
 # gitコマンドをtab補完できるようにする
 source ~/.git-completion.bash
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

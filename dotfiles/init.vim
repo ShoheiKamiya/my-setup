@@ -7,7 +7,6 @@ set expandtab
 set tabstop=2
 set shiftwidth=2 "自動インデント時に入力する空白の数
 set autoindent "改行時に自動でインデント
-set cursorline "現在の行を強調表示
 set noswapfile "スワップファイルを作らない
 set fenc=utf-8 "文字コード
 set showcmd "入力中コマンドをステータスに表示
@@ -25,3 +24,55 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ` ``<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
+inoremap < <><esc>i
+
+let mapleader = "\<space>"
+"=====fzf-preview keymap=====
+nnoremap <silent> <Leader>p     :<C-u>CocCommand fzf-preview.ProjectFiles --resume --add-fzf-arg=--no-sort -i<CR>
+nnoremap <silent> <Leader>b     :<C-u>CocCommand fzf-preview.Buffers<CR>
+"require ripgrep https://github.com/BurntSushi/ripgrep
+nnoremap <silent> <Leader>s     :<C-u>CocCommand fzf-preview.ProjectGrep --resume --add-fzf-arg=--no-sort -i<space>
+
+"=====dein settings=====
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/s_kamiya/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/s_kamiya/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('/Users/s_kamiya/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+" Plugins
+call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+call dein#add('neoclide/coc.nvim', { 'rev': 'release', 'merged': 0 })
+
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
+
+call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif

@@ -103,3 +103,5 @@ eval "$(rbenv init -)"
 # aws cli
 export AWS_DEFAULT_REGION=ap-northeast-1
 export AWS_PROFILE=gsuite
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

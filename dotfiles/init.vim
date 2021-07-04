@@ -11,6 +11,7 @@ set tabstop=2
 set shiftwidth=2 "自動インデント時に入力する空白の数
 set autoindent "改行時に自動でインデント
 set noswapfile "スワップファイルを作らない
+set nowrap
 set fenc=utf-8 "文字コード
 set showcmd "入力中コマンドをステータスに表示
 set list

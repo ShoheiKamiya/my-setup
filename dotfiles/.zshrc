@@ -2,10 +2,6 @@
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source ~/.git-prompt.sh
 
-
-# Alias
-alias la="ls -al -G"
-
 # Alias docker
 alias d="docker"
 alias dcom="docker-compose"
@@ -54,41 +50,12 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
 SAVEHIST=10000
 
-# share .zshhistory
-setopt inc_append_history
-setopt share_history
-
-# ctrl + R でpecoを呼び出す
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tac | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
-}
-
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
-
-# [peco] ブランチを切り替えるときにインクリメンタルサーチ
 function co() {
-  git branch | peco | xargs git checkout
-}
-
-# [peco] incremental search when git add
-function add() {
-  git diff --name-only | peco | xargs git add
-}
-
-function p() {
-  find . | peco | xargs nvim
+  git branch | fzf | xargs git checkout
 }
 
 function s() {
   cat ~/logs/snippets.txt | peco
-}
-
-function l() {
-  text="+%H:%M $1 [$2pt]"
-  date $text >> "$HOME/logs/`date "+%d"`.md"
 }
 
 # ==============

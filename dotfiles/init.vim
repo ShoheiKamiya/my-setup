@@ -1,4 +1,5 @@
 colorscheme peachpuff
+autocmd ColorScheme * highlight Search ctermbg=12
 autocmd ColorScheme * highlight ColorColumn ctermbg=Black
 autocmd ColorScheme * highlight Folded ctermbg=Black
 set title "タイトルをセット
@@ -35,7 +36,10 @@ inoremap ` ``<esc>i
 inoremap ( ()<esc>i
 inoremap { {}<esc>i
 inoremap [ []<esc>i
-inoremap < <><esc>i
+nnoremap <C-p> "0p
+vnoremap <C-p> "0p
+vnoremap " c"<esc>pa"
+vnoremap ' c'<esc>pa'
 
 let mapleader = "\<space>"
 nmap <Leader>f [fzf-p]
